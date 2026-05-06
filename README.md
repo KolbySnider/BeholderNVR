@@ -5,7 +5,7 @@ Multi-camera NVR with real-time object detection, tracking, and a Kafka event pi
 Beholder ingests RTSP streams, runs motion-gated YOLO inference per camera, tracks objects across frames with DeepSORT, and publishes events to Kafka. Independent consumers persist events to Postgres and emit alerts. The PyQt6 dashboard shows live feeds and a searchable detection log with snapshot galleries.
 
 <img width="1220" height="429" alt="Beholder" src="https://github.com/user-attachments/assets/f62794de-f10d-4b14-9eca-92dfa4f6458e" />
-
+<img width="985" height="515" alt="Beholder2" src="https://github.com/user-attachments/assets/87232797-9a63-4aaf-8a06-a01781834353" />
 
 ## Features
 
