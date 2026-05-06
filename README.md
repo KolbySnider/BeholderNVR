@@ -19,7 +19,7 @@ Beholder ingests RTSP streams, runs motion-gated YOLO inference per camera, trac
 ## Setup
 
 ```bash
-git clone https://github.com/KolbySnider/beholder.git
+git clone https://github.com/KolbySnider/BeholderNVR.git
 cd beholder
 python -m venv .venv
 .venv\Scripts\activate
