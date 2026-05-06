@@ -1,10 +1,3 @@
-"""
-EventManager — owns in-memory state for active tracks and emits Kafka events
-when tracks open, close, or generate snapshots.
-
-This module is the *producer* of business events. Database writes are
-performed by the db_writer consumer, which is the sole owner of Postgres.
-"""
 import time
 import threading
 import itertools

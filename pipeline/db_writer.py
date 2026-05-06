@@ -1,9 +1,3 @@
-"""
-db_writer — Kafka consumer that owns all writes to Postgres.
-
-Subscribes to events.opened, events.closed, and snapshots.captured.
-All operations are idempotent so reprocessing the same message is safe.
-"""
 import json
 import signal
 import sys

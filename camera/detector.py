@@ -72,6 +72,9 @@ def postprocess(output, orig_h, orig_w):
     detections = []
     for i in indices.flatten():
         x1, y1, w, h = boxes[i]
+        cls_idx = class_ids[i]
+        if cls_idx >= len(CLASSES):
+            continue
         detections.append({
             "class": CLASSES[class_ids[i]],
             "confidence": confidences[i],

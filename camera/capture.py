@@ -31,7 +31,7 @@ class CameraCapture:
                 "-print_format", "json",
                 "-show_streams", self.url
             ]
-            result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+            result = subprocess.run(cmd, capture_output=True, text=True, timeout=20)
             info = json.loads(result.stdout)
             for stream in info.get("streams", []):
                 if stream.get("codec_type") == "video":
