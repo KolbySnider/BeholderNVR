@@ -1,0 +1,429 @@
+/* ============================================
+   BeholderNVR — Global Stylesheet
+   Palette:
+     bg-base       #0d1117
+     bg-surface    #161b22
+     bg-elev       #1c2128
+     bg-input      #21262d
+     border        #30363d
+     border-hover  #388bfd
+     text-primary  #e6edf3
+     text-muted    #8b949e
+     text-subtle   #6e7681
+     accent-blue   #388bfd
+     accent-green  #238636
+     accent-red    #da3633
+     status-on     #3fb950
+   ============================================ */
+
+
+/* ─── Base ─────────────────────────────────── */
+
+QWidget {
+    background: #0d1117;
+    color: #e6edf3;
+    font-family: 'Consolas';
+    font-size: 12px;
+}
+
+QMainWindow, QDialog {
+    background: #0d1117;
+}
+
+
+/* ─── Top app bar ──────────────────────────── */
+
+QWidget#topbar {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+QWidget#topbar QLabel,
+QWidget#topbar QLineEdit,
+QWidget#topbar QComboBox,
+QWidget#topbar QPushButton {
+    background: transparent;
+}
+
+QWidget#topbar QLineEdit,
+QWidget#topbar QComboBox {
+    background: #21262d;
+}
+
+/* ─── Tabs ─────────────────────────────────── */
+
+QTabWidget, QTabWidget::pane {
+    background: #0d1117;
+    border: none;
+}
+
+QTabBar {
+    background: #0d1117;
+    qproperty-drawBase: 0;
+}
+
+QTabBar::tab {
+    background: #0d1117;
+    color: #8b949e;
+    padding: 10px 24px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    min-width: 100px;
+}
+
+QTabBar::tab:selected {
+    color: #e6edf3;
+    border-bottom: 2px solid #388bfd;
+}
+
+QTabBar::tab:hover {
+    color: #e6edf3;
+    background: #161b22;
+}
+
+
+/* ─── Inputs ───────────────────────────────── */
+
+QLineEdit {
+    background: #21262d;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+QLineEdit:focus {
+    border: 1px solid #388bfd;
+}
+
+QComboBox {
+    background: #21262d;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    padding: 6px 12px;
+    border-radius: 6px;
+}
+QComboBox::drop-down { border: none; }
+QComboBox QAbstractItemView {
+    background: #21262d;
+    color: #e6edf3;
+    border: 1px solid #30363d;
+    selection-background-color: #0f3460;
+}
+
+
+/* ─── Buttons ──────────────────────────────── */
+
+QPushButton[role="primary"] {
+    background: #238636;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+}
+QPushButton[role="primary"]:hover {
+    background: #2ea043;
+}
+
+QPushButton[role="ghost"] {
+    background: #21262d;
+    color: #8b949e;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+QPushButton[role="ghost"]:hover {
+    background: #30363d;
+    color: #e6edf3;
+}
+
+QPushButton[role="danger"] {
+    background: #da3633;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+}
+QPushButton[role="danger"]:hover {
+    background: #f85149;
+}
+
+QPushButton[role="cog"] {
+    background: #21262d;
+    color: #8b949e;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+QPushButton[role="remove"] {
+    background: #21262d;
+    color: #8b949e;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton[role="remove"]:hover {
+    background: #30363d;
+    color: #da3633;
+    border: 1px solid #da3633;
+}
+
+QPushButton[role="cog"]:hover {
+    background: #30363d;
+    color: #e6edf3;
+}
+
+QPushButton#eventDelete {
+    background: rgba(13, 17, 23, 0.85);
+    color: #8b949e;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+QPushButton#eventDelete:hover {
+    background: #da3633;
+    color: white;
+    border: 1px solid #da3633;
+}
+
+/* ─── Checkboxes ───────────────────────────── */
+
+QCheckBox {
+    color: #e6edf3;
+    spacing: 8px;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+QCheckBox:hover { background: #21262d; }
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    background: #21262d;
+}
+QCheckBox::indicator:hover {
+    border: 1px solid #388bfd;
+    background: #30363d;
+}
+QCheckBox::indicator:checked {
+    background: #238636;
+    border: 1px solid #238636;
+}
+QCheckBox::indicator:checked:hover {
+    background: #2ea043;
+}
+
+
+/* ─── Sliders ──────────────────────────────── */
+
+QSlider::groove:horizontal {
+    background: #21262d;
+    height: 4px;
+    border-radius: 2px;
+}
+QSlider::handle:horizontal {
+    background: #388bfd;
+    width: 14px;
+    height: 14px;
+    margin: -6px 0;
+    border-radius: 7px;
+}
+QSlider::sub-page:horizontal {
+    background: #388bfd;
+    border-radius: 2px;
+}
+
+
+/* ─── Scroll areas ─────────────────────────── */
+
+QScrollArea {
+    border: none;
+    background: #0d1117;
+}
+
+QScrollBar:vertical {
+    background: transparent;
+    width: 8px;
+    margin: 0;
+}
+QScrollBar::handle:vertical {
+    background: #30363d;
+    border-radius: 4px;
+    min-height: 30px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #388bfd;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    background: transparent;
+    height: 8px;
+}
+QScrollBar::handle:horizontal {
+    background: #30363d;
+    border-radius: 4px;
+    min-width: 30px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #388bfd;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0;
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+
+
+/* ─── Surfaces ─────────────────────────────── */
+
+QWidget[role="surface"] {
+    background: #161b22;
+}
+QWidget[role="elev"] {
+    background: #1c2128;
+}
+QWidget[role="bordered"] {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+QWidget[role="bordered-top"] {
+    background: #161b22;
+    border-top: 1px solid #30363d;
+}
+
+
+/* ─── Add-camera placeholder ───────────────── */
+
+#cameraPlaceholder {
+    background: #161b22;
+    border: 2px dashed #30363d;
+    border-radius: 8px;
+}
+#cameraPlaceholder:hover {
+    background: #1c2128;
+    border: 2px dashed #388bfd;
+}
+#cameraPlaceholder #plusIcon {
+    color: #30363d;
+    font-size: 48px;
+    font-weight: 100;
+    border: none;
+    background: transparent;
+}
+#cameraPlaceholder #plusLabel {
+    color: #8b949e;
+    font-size: 13px;
+    border: none;
+    background: transparent;
+}
+
+
+/* ─── Camera widget ────────────────────────── */
+
+#cameraCard {
+    background: #161b22;
+    border-radius: 8px;
+}
+
+#cameraVideo {
+    background: black;
+    border-radius: 8px 8px 0 0;
+}
+
+#cameraBottomBar {
+    background: #1c2128;
+    border-radius: 0 0 8px 8px;
+}
+
+#cameraStatusGroup {
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+}
+
+#cameraStatusGroup QLabel {
+    background: transparent;
+    border: none;
+}
+
+#cameraName {
+    color: #e6edf3;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#cameraDot[active="true"] {
+    color: #3fb950;
+    font-size: 10px;
+}
+#cameraDot[active="false"] {
+    color: #30363d;
+    font-size: 10px;
+}
+
+
+/* ─── Fullscreen window ────────────────────── */
+
+#fullscreenTitle {
+    color: #e6edf3;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#fullscreenVideo {
+    background: black;
+}
+
+
+/* ─── Settings dialog ──────────────────────── */
+
+#settingsTitle {
+    color: #e6edf3;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+QLabel[role="section"] {
+    color: #388bfd;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 8px;
+}
+
+QLabel[role="value"] {
+    color: #8b949e;
+    font-size: 11px;
+}
+
+QLabel[role="hint"] {
+    color: #6e7681;
+    font-size: 10px;
+}
+
+
+/* ─── Add-camera dialog ────────────────────── */
+
+QLabel[role="form-label"] {
+    color: #8b949e;
+    font-size: 12px;
+}
