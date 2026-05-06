@@ -21,7 +21,7 @@ Beholder ingests RTSP streams, runs motion-gated YOLO inference per camera, trac
 
 ```bash
 git clone https://github.com/KolbySnider/BeholderNVR.git
-cd beholder
+cd BeholderNVR
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
@@ -36,7 +36,7 @@ Install the ONNX Runtime variant for your hardware (pick one):
 | Apple Silicon | `pip install onnxruntime-silicon` |
 | CPU only | `pip install onnxruntime` |
 
-Drop a YOLOv8/v9/v10/v11 ONNX model into the project root as `yolov8m.onnx`. Any size works (`n`/`s`/`m`/`l`/`x`).
+Drop a YOLOv8/v9/v10/v11 ONNX model into the projects models folder as `yolov8m.onnx`. Any size works (`n`/`s`/`m`/`l`/`x`).
 
 You'll also need `ffmpeg` and `ffprobe` on your PATH, and Docker Desktop running.
 
